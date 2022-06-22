@@ -4,20 +4,13 @@ namespace Day10Assignment
 {
     internal class Program
     {
+
         static void Main(string[] args)
         {
-            int IS_FULL_TIME = 1;
-
-            Random random = new Random();
-            int empCheck = random.Next(0, 2);
-            if (empCheck == IS_FULL_TIME)
-            {
-                Console.WriteLine("Employee is present");
-            }
-            else
-            {
-                Console.WriteLine("Employee is absent");
-            }
+            Class1 class1 = new Class1();
+            class1.addCompanyEmpWage("Delloitte", 20, 20, 100);
+            class1.addCompanyEmpWage("Dell", 20, 20, 100);
         }
+
     }
 }
