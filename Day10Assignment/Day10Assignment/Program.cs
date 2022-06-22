@@ -7,10 +7,10 @@ namespace Day10Assignment
 
         static void Main(string[] args)
         {
-
-            Class1.computeEmpWage("HCL", 20, 20, 100);
-            Class1.computeEmpWage("Infosys", 20, 30, 200);
+            Class1 class1 = new Class1();
+            class1.addCompanyEmpWage("Delloitte", 20, 20, 100);
+            class1.addCompanyEmpWage("Dell", 20, 20, 100);
         }
 
     }
-} 
+}
