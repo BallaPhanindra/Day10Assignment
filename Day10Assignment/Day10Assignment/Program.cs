@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Day10Assignment
+namespace DAy10Assignment
 {
     internal class Program
     {
