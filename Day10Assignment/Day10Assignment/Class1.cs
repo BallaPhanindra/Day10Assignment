@@ -4,21 +4,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Day10Assignment
+namespace ConsoleApp1
 {
     internal class Class1
     {
         public const int IS_PART_TIME = 1;
         public const int IS_FULL_TIME = 2;
 
+        private String company;
+        private int empRatePerHr;
+        private int NumberOfWorkingDays;
+        private int MaxHoursPerMonth;
+        private int totalempWage;
 
-        public static void computeEmpWage(String company, int empRatePerHr, int numberOfWorkingDays, int maxHoursPerMonth)
+        public Class1(string company, int empRatePerHr, int numberOfWorkingDays, int maxHoursPerMonth)
+        {
+            this.company = company;
+            this.empRatePerHr = empRatePerHr;
+            this.NumberOfWorkingDays = numberOfWorkingDays;
+            this.MaxHoursPerMonth = maxHoursPerMonth;
+
+        }
+
+        public void computeEmpWage()
         {
             int empHrs = 0;
             int totalWorkingDays = 0;
             int totalEmpHours = 0;
             int totalEmpWage = 0;
-            while (totalEmpHours <= maxHoursPerMonth && totalWorkingDays < numberOfWorkingDays)
+            while (totalEmpHours <= this.MaxHoursPerMonth && totalWorkingDays <= this.NumberOfWorkingDays)
             {
                 totalWorkingDays++;
                 Random random = new Random();
@@ -38,9 +52,9 @@ namespace Day10Assignment
                 }
                 totalEmpHours += empHrs;
 
-                totalEmpWage = totalEmpHours * empRatePerHr;
+                totalEmpWage = totalEmpHours * this.empRatePerHr;
             }
-            Console.WriteLine("total employee wage is of company" + company + "is " + totalEmpWage);
+            Console.WriteLine("total employee wage is of company" + this.company + "is " + totalEmpWage);
         }
     }
 }
